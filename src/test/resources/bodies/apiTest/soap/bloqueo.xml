@@ -1,0 +1,31 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="urn://bancodebogota.com/creditcard/product/service/" xmlns:even="urn://bancodebogota.com/creditcard/product/event/" xmlns:v1="urn://bancodebogota.com/ifx/base/v1/" xmlns:v11="urn://bancodebogota.com/creditcard/involvedparty/v1/" xmlns:v12="urn://bancodebogota.com/creditcard/product/v1/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ser:modCCBlockPreventiveBankRequest>
+            <even:CCBlockPreventiveBankModRq>
+                <v1:RqUID>1783afb1-a6f2-4f93-b0ed-2f051d0cd1af</v1:RqUID>
+                <v1:CustId>
+                    <v1:CustLoginId>TGUZMA1</v1:CustLoginId>
+                </v1:CustId>
+                <v1:NetworkTrnInfo>
+                    <v1:NetworkOwner>${canal}</v1:NetworkOwner>
+                    <v1:TerminalId>10.84.64.166</v1:TerminalId>
+                </v1:NetworkTrnInfo>
+                <v1:ClientDt>2025-10-29T10:51:00</v1:ClientDt>
+                <v11:CustInfo>
+                    <v1:TypeId>${typeId}</v1:TypeId>
+                    <v1:ParticipantId>${participantId}</v1:ParticipantId>
+                </v11:CustInfo>
+                <v1:CardAcctId>
+                    <v1:ProductId>${productId}</v1:ProductId>
+                    <v1:CardId>${bin}</v1:CardId>
+                    <v1:CardSeqNum>${fourtc}</v1:CardSeqNum>
+                    <v1:CardStatus>
+                        <v1:StatusDesc>${descrip}</v1:StatusDesc>
+                        <v1:LockId>${bloqueo}</v1:LockId>
+                    </v1:CardStatus>
+                </v1:CardAcctId>
+            </even:CCBlockPreventiveBankModRq>
+        </ser:modCCBlockPreventiveBankRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
